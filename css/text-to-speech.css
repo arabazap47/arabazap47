@@ -1,0 +1,211 @@
+:root {
+  --main-color: rgb(145, 144, 144);
+  --secondary-color: rgb(86, 86, 86);
+  --border-color: #ddd;
+  --background-color: #fd3074;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 4rem 11rem 6rem 11rem;
+  height: 50vh;
+}
+
+.left-side {
+  /* display: flex;
+    flex-direction: column; */
+  /* align-items: center;
+    justify-content: center; */
+
+  & h1 {
+    font-size: 3rem;
+    background-image: linear-gradient(#757575, #4d4d4d, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  & #textbox {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 1rem;
+    background-color: #ff75a32c;
+    letter-spacing: 1px;
+    border: 1px solid #fd3074;
+  }
+}
+.selector {
+  display: flex;
+}
+.selector > div {
+  line-height: 2rem;
+  & h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+}
+#voice-selector {
+  width: 21rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+
+  & option {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid #fd3074;
+    outline: none;
+    font-size: 1rem;
+    color: var(--secondary-color);
+  }
+}
+.selector #speakbtn {
+  font-size: 1.1rem;
+  background: none;
+  border-radius: 0.3rem;
+  border: 1px solid #fd3074;
+  padding: 0 1rem;
+  font-weight: 600;
+  background-color: #fd3074;
+  color: white;
+  margin-left: 3rem;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    background-color: #ff538d;
+    color: white;
+  }
+}
+
+/* 1200px */
+@media (width<=1200px) {
+    html {
+      font-size: 85%;
+      padding: 0.5rem;
+    }
+    .wrapper {
+      grid-template-columns: 40% 60%;
+      margin: 2rem 5rem 5rem 5rem;
+      row-gap: 2rem;
+     
+    }
+    /* .right-side {
+      & .selector {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        width: 100%;
+      }
+    } */
+    #voice-selector {
+      width: 100%;
+    }
+    /* .selector{
+        align-items: center;
+    } */
+    .selector #speakbtn {
+      margin: 0 0 0 3rem;
+      padding: 0.8rem 0;
+      width: 38%;
+    }
+  }
+
+/* 840px */
+@media (width<=840px) {
+    html {
+      font-size: 80%;
+      padding: 0.5rem;
+    }
+    .wrapper {
+      grid-template-columns: 100%;
+      margin: 2rem 0 5rem 0;
+      row-gap: 2rem;
+     
+    }
+    .right-side {
+      & .selector {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        width: 100%;
+      }
+    }
+    #voice-selector {
+      width: 100%;
+    }
+    .selector{
+        align-items: center;
+    }
+    .selector #speakbtn {
+      margin: 0;
+      padding: 0.8rem 0;
+      width: 38%;
+    }
+  }
+
+/* 475px */
+@media (width<=475px) {
+  html {
+    font-size: 70%;
+    padding: 0.5rem;
+  }
+  .wrapper {
+    grid-template-columns: 100%;
+    margin: 2rem 0 14rem 0;
+    row-gap: 2rem;
+  }
+  .right-side {
+    & .selector {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      width: 100%;
+    }
+  }
+  #voice-selector {
+    width: 100%;
+  }
+  .selector #speakbtn {
+    margin: 0;
+    padding: 0.8rem 0;
+  }
+}
+
+/* 320px */
+@media (width<=321px) {
+    html {
+      font-size: 75%;
+      padding: 0.5rem;
+    }
+    .wrapper {
+      grid-template-columns: 100%;
+      margin: 2rem 0 24rem 0;
+      row-gap: 2rem;
+    }
+    .right-side {
+      & .selector {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        width: 100%;
+      }
+    }
+    #voice-selector {
+      width: 100%;
+    }
+    .selector #speakbtn {
+      margin: 0;
+      padding: 0.8rem 0;
+    }
+  }

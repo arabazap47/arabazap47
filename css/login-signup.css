@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  & img {
+    width: 20rem;
+    height: auto;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+    position: relative;
+  width: 30%;
+  height: 40rem;
+  border-radius: 1rem;
+  background-color: #eef1f0;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  row-gap: 1.2rem;
+
+  & h2{
+    font-size:1.6rem;
+  }
+  & p{
+    font-size: 1.1rem;
+  }
+}
+.login-container .btns {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  cursor: pointer;
+
+  & .google,
+  .facebook {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #ababab;
+    border-radius: 1.5rem;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    column-gap: 0.5rem;
+    transition: all ease-in-out 150ms;
+    text-decoration: none;
+
+    & img {
+      width: 1rem;
+      height: auto;
+    }
+    & button {
+      border: none;
+      font-size: 1.1rem;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &:hover {
+      border-color: rgb(64, 64, 64);
+    }
+  }
+}
+.login-container .terms{
+    color: #ababab;
+    position: absolute;
+    padding:  0 0.7rem;
+    bottom: 0.7rem;
+
+    & p{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* 1200 */
+@media (width<=1200px){
+  html{
+    font-size: 90%;
+    padding: 0.5rem;
+  }
+  header .logo img{
+    width: 20rem;
+  }
+  .login-container{
+    width: 50%;
+
+    height: 30rem;
+  }
+}
+
+/* 840 */
+@media (width<=840px){
+  html{
+    font-size: 85%;
+    padding: 0.5rem;
+  }
+  header .logo img{
+    width: 20rem;
+    height: 100%;
+  }
+  .login-container{
+    width: 50%;
+
+  }
+}
+/* 475 */
+
+@media (width<=475px){
+  html{
+    font-size: 75%;
+    padding: 0.5rem;
+  }
+  header .logo img{
+    width: 100%;
+  }
+  .login-container{
+    width: 100%;
+
+  }
+
+
+  
+}
