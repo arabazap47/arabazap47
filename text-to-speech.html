@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/text-to-speech.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <header data-aos="fade-down" data-aos-delay="200">
+        <nav>
+          <div class="left-nav">
+            <div class="logo">
+              <a href="index.html"><img
+                src="assets\images\logo-no-background.png"
+                alt="WhisperSynth"
+              /></a>
+            </div>
+            <div class="dropdown">
+              <a href="index.html" class="btn">Features</a>
+              <div class="drop-content">
+                <a href="text-to-speech-features.html">Text To Speech</a>
+                <a href="">AI Voice Over</a>
+                <a href="">Text To Video</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="" class="btn">Use Cases</a>
+              <div class="drop-content">
+                <a href="">Content Creation</a>
+                <a href="">Pronunciation</a>
+                <a href="">Education</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="" class="btn">Explore</a>
+              <div class="drop-content">
+                <a href="">What's New</a>
+                <a href="">Blog</a>
+                <a href="">Tutorials</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-nav">
+            <div>
+              <a href="login-signup.html">Log In</a>
+            </div>
+            <button class="sign-up" onclick=""><span>Sign Up</span></button>
+  
+            <div class="menu-bar">
+              <i class="fa-solid fa-bars" onclick="getNavs()"></i>
+              <div class="drop-down">
+                <nav role="navigation">
+                    <ul>
+                      <li onclick="location.href = 'index.html'">Features</li>
+                        <li onclick="location.href = ''">Use Cases</li>
+                        <li onclick="location.href = ''">Explore</li>
+                        <li onclick="location.href = 'login-signup.html'">Login</li>
+                        <li onclick="location.href = 'login-signup.html'">SignUp</li>
+                    </ul>
+                </nav>
+              </div> 
+            </div> </nav>
+            </div>
+          <!-- menu bar -->
+        </header>
+
+<section class="speech-container">
+    <div class="wrapper">
+        <div class="left-side" data-aos="fade-right" data-aos-delay="500">
+            <h1>Welcome To Text To Speech</h1>
+            <h1>Convert Your Text Into AI Voices</h1>
+        </div>
+        <div class="right-side" data-aos="fade-left" data-aos-delay="1000">
+            <textarea id="textbox" rows="10" cols="60" placeholder="Enter Your Text..."></textarea>
+            <div class="selector">
+               <div>
+                <h2>Choose Voice</h2>
+                <select id="voice-selector"></select>
+               </div>
+                <button id="speakbtn" ><i class="fa-solid fa-play"></i> Listen</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer data-aos="fade-up" data-aos-delay="1500">
+    <div class="logo">
+      <a href="index.html"><img src="assets/images/logo-no-background.png" alt="WhisperSynth" /></a>
+
+      <h5>WhisperSynth - Best text-to-speech software</h5>
+      <a href="">About</a>
+      <a href="">Privacy Policy</a>
+      <p>© 2024 WhisperSynth</p>
+    </div>
+    <div class="features">
+        <p>Features</p>
+        <ul>
+          <li><a href="">Text To Speech</a></li>
+          <li><a href="">AI Voiceover</a></li>
+          <li><a href="">Text To Video</a></li>
+        </ul>
+      </div>
+      <div class="use-case">
+        <p>Use case</p>
+        <ul>
+          <li><a href="">Content Creation</a></li>
+          <li><a href="">Pronunciation</a></li>
+          <li><a href="">Education</a></li>
+          <li><a href="">E-Commerce</a></li>
+        </ul>
+      </div>
+      <div class="connect">
+        <p>Connect With Us</p>
+        <ul>
+          <li><a href="">Email</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Facebook</a></li>
+        </ul>
+      </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+ <script src="JS/app.js"></script>   
+<script src="JS/speech.js"></script>
+</body>
+</html>
